@@ -10,6 +10,10 @@
     "lintfix": "npm run lint -- --fix"
   },
   "dependencies": {
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.5.1",
+    "@mui/material": "^5.5.3",
     "eslint-config-airbnb-typescript": "^16.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -17,6 +21,7 @@
     "remark-gfm": "^3.0.1"
   },
   "devDependencies": {
+    "@types/node": "^17.0.23",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
     "@typescript-eslint/eslint-plugin": "^5.17.0",

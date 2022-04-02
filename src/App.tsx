@@ -2,6 +2,7 @@ import './App.css';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { useState } from 'react';
+import Header from 'components/header/Header';
 
 const App = () => {
   const [markdown] = useState(`A paragraph with *emphasis* and **strong importance**.
@@ -20,6 +21,7 @@ A table:
 
   return (
     <div className="App">
+      <Header />
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
       >
