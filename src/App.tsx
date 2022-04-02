@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { useState } from 'react';
 
-function App() {
+const App = () => {
   const [markdown] = useState(`A paragraph with *emphasis* and **strong importance**.
 
 > A block quote with ~strikethrough~ and a URL: https://reactjs.org.
@@ -27,6 +27,6 @@ A table:
       </ReactMarkdown>
     </div>
   );
-}
+};
 
 export default App;
