@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Drawer, Link } from '@mui/material';
-import { initialState, reducer } from 'stores/markdownTextList';
+import { initialState, reducer } from 'stores/markdownTextListStore';
 import { styled } from '@mui/system';
 
 const DisplayMarkDowntextListTitle = styled('div')({
