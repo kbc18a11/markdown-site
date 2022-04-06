@@ -5,10 +5,20 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Drawer } from '@mui/material';
+import { Drawer, Link } from '@mui/material';
 import { initialState, reducer } from 'stores/markdownTextList';
+import { styled } from '@mui/system';
 
-export const ButtonAppBar = () => {
+const DisplayMarkDowntextListTitle = styled('div')({
+  padding: '10px',
+  backgroundColor: '#DDDDDD',
+});
+
+const DisplayMarkDowntextListItem = styled('div')({
+  margin: '10px 0 0 10px',
+});
+
+const ButtonAppBar = () => {
   const [isDisplaySidebar, setIsDisplaySidebar] = useState(false);
 
   const [markdownTextList] = useReducer(reducer, initialState);
@@ -26,7 +36,13 @@ export const ButtonAppBar = () => {
    * @returns マークダウン名前の一覧
    */
   const displayMarkDowntextList = () => markdownTextList.map((markdownText) => (
-    <div key={markdownText.id}>{markdownText.name}</div>
+    <DisplayMarkDowntextListItem
+      key={markdownText.id}
+    >
+      <Link href="/" underline="none" color="inherit">
+        {markdownText.name}
+      </Link>
+    </DisplayMarkDowntextListItem>
   ));
 
   return (
@@ -49,6 +65,7 @@ export const ButtonAppBar = () => {
         </Toolbar>
       </AppBar>
       <Drawer anchor="left" open={isDisplaySidebar} onClose={changeDisplaySidebarState}>
+        <DisplayMarkDowntextListTitle>マークダウン一覧</DisplayMarkDowntextListTitle>
         <div>
           {displayMarkDowntextList()}
         </div>
