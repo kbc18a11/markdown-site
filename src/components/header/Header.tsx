@@ -5,17 +5,24 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Drawer, Link } from '@mui/material';
+import { Drawer } from '@mui/material';
 import { initialState, reducer } from 'stores/MarkdownTextListStore';
 import { styled } from '@mui/system';
+import { Link } from 'react-router-dom';
 
 const DisplayMarkDowntextListTitle = styled('div')({
   padding: '10px',
   backgroundColor: '#DDDDDD',
 });
 
-const DisplayMarkDowntextListItem = styled('div')({
-  margin: '10px 0 0 10px',
+const DisplayMarkDowntextListItem = styled(Link)({
+  margin: '15px 0 0 10px',
+  textDecoration: 'none',
+  ':hover': {
+    textDecoration: 'none',
+  },
+  display: 'block',
+  color: 'black',
 });
 
 export const Header = () => {
@@ -36,16 +43,12 @@ export const Header = () => {
    * @returns マークダウン名前の一覧
    */
   const displayMarkDowntextList = () => markdownTextList.map((markdownText) => (
-    <Link
+    <DisplayMarkDowntextListItem
       key={markdownText.id}
-      href="/"
-      underline="none"
-      color="inherit"
+      to={`markdown/${markdownText.id}`}
     >
-      <DisplayMarkDowntextListItem>
-        {markdownText.name}
-      </DisplayMarkDowntextListItem>
-    </Link>
+      {markdownText.name}
+    </DisplayMarkDowntextListItem>
   ));
 
   return (
