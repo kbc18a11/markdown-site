@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Drawer, Link } from '@mui/material';
-import { initialState, reducer } from 'stores/markdownTextListStore';
+import { initialState, reducer } from 'stores/MarkdownTextListStore';
 import { styled } from '@mui/system';
 
 const DisplayMarkDowntextListTitle = styled('div')({
@@ -18,7 +18,7 @@ const DisplayMarkDowntextListItem = styled('div')({
   margin: '10px 0 0 10px',
 });
 
-const ButtonAppBar = () => {
+export const Header = () => {
   const [isDisplaySidebar, setIsDisplaySidebar] = useState(false);
 
   const [markdownTextList] = useReducer(reducer, initialState);
@@ -73,5 +73,3 @@ const ButtonAppBar = () => {
     </Box>
   );
 };
-
-export default ButtonAppBar;

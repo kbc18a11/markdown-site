@@ -1,8 +1,8 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from 'components/header/Header';
-import { Index } from 'pages';
-import { initMarkdownTextList } from 'stores/markdownTextListStore';
+import { Header } from 'components/header/Header';
+import { Index } from 'pages/Index';
+import { initMarkdownTextList } from 'stores/MarkdownTextListStore';
 
 const App = () => {
   initMarkdownTextList();
@@ -12,7 +12,10 @@ const App = () => {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route index element={<Index />} />
+          <Route
+            index
+            element={<Index />}
+          />
         </Routes>
       </BrowserRouter>
     </div>
