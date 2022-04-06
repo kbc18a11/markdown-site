@@ -36,13 +36,16 @@ export const Header = () => {
    * @returns マークダウン名前の一覧
    */
   const displayMarkDowntextList = () => markdownTextList.map((markdownText) => (
-    <DisplayMarkDowntextListItem
+    <Link
       key={markdownText.id}
+      href="/"
+      underline="none"
+      color="inherit"
     >
-      <Link href="/" underline="none" color="inherit">
+      <DisplayMarkDowntextListItem>
         {markdownText.name}
-      </Link>
-    </DisplayMarkDowntextListItem>
+      </DisplayMarkDowntextListItem>
+    </Link>
   ));
 
   return (
