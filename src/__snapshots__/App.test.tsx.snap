@@ -1,0 +1,137 @@
+// Vitest Snapshot v1
+
+exports[`Simple working test > should render correctly 1`] = `
+<div
+  class="App"
+>
+  <div
+    class="MuiBox-root css-i9gxme"
+  >
+    <header
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-hip9hq-MuiPaper-root-MuiAppBar-root"
+    >
+      <div
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1t29gy6-MuiToolbar-root"
+      >
+        <button
+          aria-label="menu"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeLarge css-ancrnh-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="MenuIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <div
+          class="MuiTypography-root MuiTypography-h6 css-1juivf6-MuiTypography-root"
+        >
+          Markdonw Site
+        </div>
+      </div>
+    </header>
+  </div>
+  <div>
+    <p>
+      A paragraph with 
+      <em>
+        emphasis
+      </em>
+       and 
+      <strong>
+        strong importance
+      </strong>
+      .
+    </p>
+    
+
+    <blockquote>
+      
+
+      <p>
+        A block quote with 
+        <del>
+          strikethrough
+        </del>
+         and a URL: 
+        <a
+          href="https://reactjs.org"
+        >
+          https://reactjs.org
+        </a>
+        .
+      </p>
+      
+
+    </blockquote>
+    
+
+    <ul
+      class="contains-task-list"
+    >
+      
+
+      <li>
+        Lists
+      </li>
+      
+
+      <li
+        class="task-list-item"
+      >
+        <input
+          disabled=""
+          type="checkbox"
+        />
+         
+        todo
+      </li>
+      
+
+      <li
+        class="task-list-item"
+      >
+        <input
+          checked=""
+          disabled=""
+          type="checkbox"
+        />
+         
+        done
+      </li>
+      
+
+    </ul>
+    
+
+    <p>
+      A table:
+    </p>
+    
+
+    <table>
+      <thead>
+        <tr>
+          <th>
+            a
+          </th>
+          <th>
+            b
+          </th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+</div>
+`;
