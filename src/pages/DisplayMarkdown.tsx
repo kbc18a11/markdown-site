@@ -1,10 +1,16 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { useState } from 'react';
+import { useReducer, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { reducer, initialState } from 'stores/MarkdownTextListStore';
 
 export const DisplayMarkdown = () => {
   const urlParams = useParams<{ id: string }>();
+
+  const [markdownTextList] = useReducer(reducer, initialState);
+
+  // 表示対象のMarkdown
+  const markdownText = markdownTextList[Number(urlParams.id)];
 
   const [markdown] = useState(`A paragraph with *emphasis* and **strong importance**.
 
@@ -22,7 +28,7 @@ A table:
 
   return (
     <div>
-      {urlParams}
+      {markdownText.name}
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
       >

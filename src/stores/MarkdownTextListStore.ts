@@ -13,12 +13,12 @@ export const initialState: MarkdownText[] = [];
 export const initMarkdownTextList = () => {
   initialState[0] = {
     id: 0,
-    name: 'test',
+    name: 'test0',
     text: 'test',
   };
   initialState[1] = {
     id: 1,
-    name: 'test',
+    name: 'test1',
     text: 'test',
   };
 };
