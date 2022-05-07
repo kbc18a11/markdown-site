@@ -10,12 +10,12 @@ import { initialState, reducer } from 'stores/MarkdownTextListStore';
 import { styled } from '@mui/system';
 import { Link } from 'react-router-dom';
 
-const DisplayMarkDowntextListTitle = styled('div')({
+export const DisplayMarkDowntextListTitle = styled('div')({
   padding: '10px',
   backgroundColor: '#DDDDDD',
 });
 
-const DisplayMarkDowntextListItem = styled(Link)({
+export const DisplayMarkDowntextListItem = styled(Link)({
   margin: '15px 0 0 10px',
   textDecoration: 'none',
   ':hover': {
