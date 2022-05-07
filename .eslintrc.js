@@ -39,6 +39,7 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'import/prefer-default-export': 'off',
     'react/jsx-filename-extension': [
       'error',
       {
@@ -46,6 +47,10 @@ module.exports = {
       },
     ],
     'react/react-in-jsx-scope': 'off',
+    'react/function-component-definition': [
+      2,
+      { namedComponents: 'arrow-function' },
+    ],
   },
   ignorePatterns: ['.eslintrc.*', 'vite.config.*']
 };

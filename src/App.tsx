@@ -1,32 +1,30 @@
 import './App.css';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Header } from 'components/header/Header';
+import { Index } from 'pages/Index';
+import { initMarkdownTextList } from 'stores/MarkdownTextListStore';
+import { DisplayMarkdown } from 'pages/DisplayMarkdown';
 
-function App() {
-  const [markdown] = useState(`A paragraph with *emphasis* and **strong importance**.
-
-> A block quote with ~strikethrough~ and a URL: https://reactjs.org.
-
-* Lists
-* [ ] todo
-* [x] done
-
-A table:
-
-| a | b |
-| - | - |
-`);
+const App = () => {
+  initMarkdownTextList();
 
   return (
     <div className="App">
-      <ReactMarkdown
-        remarkPlugins={[remarkGfm]}
-      >
-        {markdown}
-      </ReactMarkdown>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route
+            path="markdown/:id"
+            element={<DisplayMarkdown />}
+          />
+          <Route
+            index
+            element={<Index />}
+          />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
